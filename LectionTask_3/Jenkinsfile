@@ -8,7 +8,8 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          docker.build(registry + ":$BUILD_NUMBER", "LectionTask_2/task_b/")
+          def customImage = docker.build(registry + ":$BUILD_NUMBER", "LectionTask_2/task_b/")
+          customImage.push('latest')
         }
       }
     }

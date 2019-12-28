@@ -4,6 +4,7 @@ pipelineJob('DSL_DockerDeploy') {
 
   triggers {
     scm('H/5 * * * *')
+    githubPush()
   }
   description("Pipeline for $repo")
 

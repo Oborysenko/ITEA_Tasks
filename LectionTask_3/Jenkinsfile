@@ -8,7 +8,8 @@ pipeline {
     stage('Building image') {
       steps{
         script {
-          docker.build registry + ":$BUILD_NUMBER"
+          docker.build(registry + ":$BUILD_NUMBER", "-f LectionTask_2/task_b/Dockerfile")
+ #         docker.build registry + ":$BUILD_NUMBER"
         }
       }
     }

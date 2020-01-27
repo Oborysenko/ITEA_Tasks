@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  registry:
+    image: registry:2
+    ports:
+      - "5000:5000"
+
+#  jenkins:
+#    image: jenkinsci/blueocean:latest
+#    ports:
+#      - "8080:8080"
+#      - "50000:50000"
+#    volumes:
+#      - /home/osboxes/devOps/ITEA_Tasks/LectionTask_3/jenkins-data:/var/jenkins_home
+#      - /var/run/docker.sock:/var/run/docker.sock
